@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Nexora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nexora Admin Dashboard</h1>
+
+        <nav>
+            <a href="index.html">Store</a>
+            <a href="add-product.html">Add Product</a>
+
+            <button
+                type="button"
+                class="logout-link logout-btn"
+                onclick="logoutUser()"
+            >
+                Logout
+            </button>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <h2>Marketplace Management</h2>
+
+        <section>
+            <h2>Product Submissions</h2>
+            <div id="admin-products">Loading products...</div>
+        </section>
+
+        <section>
+            <h2>All Orders</h2>
+            <div id="admin-orders">Loading orders...</div>
+        </section>
+
+        <section>
+            <h2>Registered Users</h2>
+            <div id="admin-users">Loading users...</div>
+        </section>
+
+        <p id="admin-message"></p>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Nexora</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="cart.html" id="cart-count">Cart (0)</a>
+
+            <a href="login.html" id="login-link">Login</a>
+            <a href="register.html" id="register-link">Register</a>
+            <a href="dashboard.html" id="dashboard-link" hidden>My Dashboard</a>
+            <a href="admin.html" id="admin-link" hidden>Admin Dashboard</a>
+            <a href="add-product.html" id="list-product-link" hidden>List Product</a>
+
+            <button
+                type="button"
+                id="logout-btn"
+                class="logout-link logout-btn"
+                onclick="logoutUser()"
+            >
+                Logout
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Nexora</h1>
+            <p>Discover amazing products at great prices.</p>
+            <a href="#products">
+                <button type="button">Shop Now</button>
+            </a>
+        </section>
+
+        <section class="products" id="products">
+            <h2>Our Latest Products</h2>
+
+            <div class="product-container" id="product-container">
+                <p id="products-message">Loading products...</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Nexora</h2>
+            <p>Your destination for quality products and a better shopping experience.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Thank you for shopping with Nexora.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>

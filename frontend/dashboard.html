@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | Nexora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nexora - My Dashboard</h1>
+        <nav>
+            <a href="index.html">Store</a>
+            <a href="add-product.html">List Your Product</a>
+            <button onclick="logoutUser()">Logout</button>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <h2 id="welcome">My Account</h2>
+
+        <section>
+            <h2>My Product Listings</h2>
+            <div id="my-products">Loading products...</div>
+        </section>
+
+        <section>
+            <h2>My Orders</h2>
+            <div id="my-orders">Loading orders...</div>
+        </section>
+
+        <p id="dashboard-message"></p>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

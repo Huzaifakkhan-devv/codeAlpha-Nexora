@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Nexora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Nexora</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html" id="cart-count">Cart (0)</a>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+
+        <div class="checkout-heading">
+            <h1>Checkout</h1>
+            <p>Enter your details to place your order.</p>
+        </div>
+
+        <div class="checkout-layout">
+
+            <section class="checkout-form-section">
+                <h2>Customer Information</h2>
+
+                <form id="checkout-form">
+
+                    <div class="form-group">
+                        <label for="customer-name">Full Name</label>
+                        <input
+                            type="text"
+                            id="customer-name"
+                            name="customerName"
+                            placeholder="Enter your full name"
+                            minlength="3"
+                            maxlength="80"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            name="phone"
+                            placeholder="03XXXXXXXXX"
+                            pattern="[0-9+\-\s]{7,20}"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">Email Address</label>
+                        <input
+                            type="email"
+                            id="customer-email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-address">Delivery Address</label>
+                        <textarea
+                            id="customer-address"
+                            name="address"
+                            rows="4"
+                            placeholder="House number, street, area..."
+                            minlength="10"
+                            maxlength="300"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-city">City</label>
+                        <input
+                            type="text"
+                            id="customer-city"
+                            name="city"
+                            placeholder="Enter your city"
+                            minlength="2"
+                            maxlength="80"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-notes">Additional Notes (Optional)</label>
+                        <textarea
+                            id="customer-notes"
+                            name="notes"
+                            rows="3"
+                            maxlength="300"
+                            placeholder="Delivery instructions..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>Payment Method</h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="COD"
+                                checked
+                            >
+                            Cash on Delivery (COD)
+                        </label>
+
+                        <p>Pay cash when your order is delivered.</p>
+                    </div>
+
+                    <button type="submit" id="place-order-button">
+                        Place Order
+                    </button>
+
+                    <p id="checkout-message" role="status"></p>
+
+                </form>
+            </section>
+
+            <aside class="checkout-summary">
+
+                <h2>Your Order</h2>
+
+                <div id="checkout-items">
+                    <p>Loading your cart...</p>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row">
+                    <strong>Subtotal</strong>
+                    <strong id="checkout-subtotal">$0.00</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+
+                <p class="secure-message">
+                    Payment will be collected when your order is delivered.
+                </p>
+
+                <a class="back-to-cart" href="cart.html">Back to Cart</a>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
