@@ -1,7 +1,4 @@
-
-// ========================================
 // 1. API CONFIGURATION
-// ========================================
 
 const API_URL = "http://localhost:5000/api/products";
 const IMAGE_BASE_URL = "http://localhost:5000";
@@ -21,9 +18,7 @@ function getImageUrl(imagePath) {
 }
 
 
-// ========================================
 // 2. LOAD CART FROM LOCAL STORAGE
-// ========================================
 
 let cart = [];
 
@@ -44,10 +39,7 @@ cart = cart.map(item => ({
     price: Number(item.price) || 0
 }));
 
-
-// ========================================
 // 3. CART COUNTER AND SAVE
-// ========================================
 
 const cartCounter = document.getElementById("cart-count");
 
@@ -70,9 +62,7 @@ function saveCart() {
 updateCartCounter();
 
 
-// ========================================
-// 4. ADD PRODUCT TO CART
-// ========================================
+// 4. ADD PRODUCT TO CARt
 
 function addToCart(product) {
     const existingProduct = cart.find(item => {
@@ -104,9 +94,7 @@ function addToCart(product) {
 }
 
 
-// ========================================
 // 5. FETCH ALL PRODUCTS FROM DATABASE
-// ========================================
 
 async function fetchProducts() {
     const container = document.getElementById("product-container");
@@ -133,10 +121,7 @@ async function fetchProducts() {
     }
 }
 
-
-// ========================================
 // 6. DISPLAY PRODUCTS ON HOMEPAGE
-// ========================================
 
 function displayProducts(products) {
     const container = document.getElementById("product-container");
@@ -193,9 +178,7 @@ function displayProducts(products) {
 }
 
 
-// ========================================
-// 7. FETCH SINGLE PRODUCT DETAILS
-// ========================================
+// 7. FETCH SINGLE PRODUCT DETAIL
 
 async function fetchSingleProduct() {
     const detailName = document.getElementById("detail-name");
@@ -274,9 +257,7 @@ async function fetchSingleProduct() {
 }
 
 
-// ========================================
 // 8. RENDER CART PAGE
-// ========================================
 
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
@@ -373,9 +354,7 @@ function updateCart() {
 }
 
 
-// ========================================
 // 9. CART CHECKOUT BUTTON
-// ========================================
 
 const checkoutButton = document.getElementById("checkout-button");
 
@@ -391,9 +370,7 @@ if (checkoutButton) {
 }
 
 
-// ========================================
 // 10. CHECKOUT ORDER SUMMARY
-// ========================================
 
 function renderCheckoutSummary() {
     const checkoutItems = document.getElementById("checkout-items");
@@ -441,9 +418,7 @@ function renderCheckoutSummary() {
 }
 
 
-// ========================================
 // 11. COD CHECKOUT AND ORDER PLACEMENT
-// ========================================
 
 const checkoutForm = document.getElementById("checkout-form");
 
@@ -548,10 +523,7 @@ if (checkoutForm) {
     });
 }
 
-
-// ========================================
 // 12. INITIALIZE PAGES
-// ========================================
 
 fetchProducts();
 fetchSingleProduct();
