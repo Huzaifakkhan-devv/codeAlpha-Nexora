@@ -104,13 +104,13 @@ codealpha_ecommerce/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Huzaifakkhan-devv/codeAlpha-Nexora.git
 ```
 
 ### 2. Navigate to the Project
 
 ```bash
-cd codealpha_ecommerce
+cd codealpha_Nexora
 ```
 
 ### 3. Install Backend Dependencies
