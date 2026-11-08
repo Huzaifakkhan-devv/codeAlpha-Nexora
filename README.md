@@ -188,7 +188,7 @@ Postman is used to test backend API endpoints and verify API responses.
 
 Full Stack Development Student
 
-GitHub: [Your GitHub Profile](https://github.com/)
+GitHub: https://github.com/Huzaifakkhan-devv/codeAlpha-Nexora
 
 ## 📌 Internship
 
