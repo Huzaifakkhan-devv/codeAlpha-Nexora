@@ -18,11 +18,11 @@ const {
 
 // Public routes
 router.get("/", getProducts);
-router.get("/:id", getProductById);
+
 
 // Logged-in user routes
 router.get("/mine", protect, getMyProducts);
-
+router.get("/:id", getProductById);
 // Admin routes
 router.get("/admin/all", protect, adminOnly, getAllAdminProducts);
 router.patch("/:id/review", protect, adminOnly, reviewProduct);

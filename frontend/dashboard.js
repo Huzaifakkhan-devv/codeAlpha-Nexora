@@ -72,7 +72,7 @@ async function loadMyProducts() {
                 if (!confirm("Delete this product listing?")) return;
 
                 const result = await fetch(
-                    `${API}/products/${product._id}`,
+                    `${API}/products/${product.id}`,
                     {
                         method: "DELETE",
                         headers: {
